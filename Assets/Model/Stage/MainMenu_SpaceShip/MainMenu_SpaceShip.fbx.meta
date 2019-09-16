@@ -1,0 +1,221 @@
+fileFormatVersion: 2
+guid: 5fc9a91fb82c88a4193d5230fc3dfb50
+ModelImporter:
+  serializedVersion: 22
+  fileIDToRecycleName:
+    100000: Background
+    100002: BeamProjector
+    100004: CloudEmitter
+    100006: Decorate
+    100008: DirLight
+    100010: //RootNode
+    100012: Sky
+    100014: Warship
+    100016: Warship_ConterStands
+    100018: Warship_ControlDesk01
+    100020: Warship_ControlDesk02
+    100022: Warship_ControlDesk03
+    100024: Warship_ControlMan01
+    100026: Warship_ControlMan02
+    100028: Warship_ControlMan03
+    100030: Warship_Roof
+    100032: Warship_Screen01
+    100034: Warship_Screen02
+    100036: Warship_Screen03
+    100038: Warship_Screen04
+    100040: Warship_Wall
+    400000: Background
+    400002: BeamProjector
+    400004: CloudEmitter
+    400006: Decorate
+    400008: DirLight
+    400010: //RootNode
+    400012: Sky
+    400014: Warship
+    400016: Warship_ConterStands
+    400018: Warship_ControlDesk01
+    400020: Warship_ControlDesk02
+    400022: Warship_ControlDesk03
+    400024: Warship_ControlMan01
+    400026: Warship_ControlMan02
+    400028: Warship_ControlMan03
+    400030: Warship_Roof
+    400032: Warship_Screen01
+    400034: Warship_Screen02
+    400036: Warship_Screen03
+    400038: Warship_Screen04
+    400040: Warship_Wall
+    2100000: Sky
+    2100002: CloudBackground
+    2100004: Ship_Near
+    2100006: Screen_near
+    2100008: Ship_Far2
+    2100010: Ship_Far1
+    2100012: Pilot
+    2100014: Screen
+    2300000: Background
+    2300002: Sky
+    2300004: Warship_ConterStands
+    2300006: Warship_ControlDesk01
+    2300008: Warship_ControlDesk02
+    2300010: Warship_ControlDesk03
+    2300012: Warship_ControlMan01
+    2300014: Warship_ControlMan02
+    2300016: Warship_ControlMan03
+    2300018: Warship_Roof
+    2300020: Warship_Screen01
+    2300022: Warship_Screen02
+    2300024: Warship_Screen03
+    2300026: Warship_Screen04
+    2300028: Warship_Wall
+    3300000: Background
+    3300002: Sky
+    3300004: Warship_ConterStands
+    3300006: Warship_ControlDesk01
+    3300008: Warship_ControlDesk02
+    3300010: Warship_ControlDesk03
+    3300012: Warship_ControlMan01
+    3300014: Warship_ControlMan02
+    3300016: Warship_ControlMan03
+    3300018: Warship_Roof
+    3300020: Warship_Screen01
+    3300022: Warship_Screen02
+    3300024: Warship_Screen03
+    3300026: Warship_Screen04
+    3300028: Warship_Wall
+    4300000: Sky
+    4300002: Background
+    4300004: Warship_ConterStands
+    4300006: Warship_Screen04
+    4300008: Warship_ControlDesk01
+    4300010: Warship_ControlMan01
+    4300012: Warship_Screen01
+    4300014: Warship_ControlDesk02
+    4300016: Warship_ControlMan02
+    4300018: Warship_Screen02
+    4300020: Warship_ControlDesk03
+    4300022: Warship_ControlMan03
+    4300024: Warship_Screen03
+    4300026: Warship_Roof
+    4300028: Warship_Wall
+    9500000: //RootNode
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: CloudBackground
+    second: {fileID: 2100000, guid: ea0cdb31ec8bb0340b8d152cffa7276a, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Pilot
+    second: {fileID: 2100000, guid: 5a049d23114c5c644b0e6dfc0273db73, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Screen
+    second: {fileID: 2100000, guid: 9bddb749c56d04847a41fdcace769054, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Screen_near
+    second: {fileID: 2100000, guid: 3eb0ad4712829cb47a175371e441a32f, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Ship_Far1
+    second: {fileID: 2100000, guid: 15af26cd18dadf54d8686418153aac47, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Ship_Far2
+    second: {fileID: 2100000, guid: d04fc5ac93d26af4c94d4d6561fc1df2, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Ship_Near
+    second: {fileID: 2100000, guid: 634422a73cb4e2b41b05221295c978fc, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Sky
+    second: {fileID: 2100000, guid: 1648ad59064faeb4c8659ec14a4d852d, type: 2}
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 100
+    meshCompression: 0
+    addColliders: 0
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    preserveHierarchy: 0
+    indexFormat: 0
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    rootMotionBoneRotation: {x: 0, y: 0, z: 0, w: 1}
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

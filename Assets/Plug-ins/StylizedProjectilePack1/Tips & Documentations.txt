@@ -1,0 +1,24 @@
+Tips and tutorials: Stylized Projectile Pack #1
+
+How to make new colored projectiles
+
+1. Copy the template folder (StylizedProjectilePack1/prefabs/"what you want to copy"/Template"what you want to copy")
+2. Drag out the prefab into the sceneview
+3. Open up the tabs in particleColorChanger script and start changing the color values.
+4. Use apply check to apply color or turn on the keep_apply changes.
+5. Save prefab
+
+Optimization tips:
+Disabling components is the way to go, all particles can be reduced in emittion if needed. 
+(Inside the Particle System, Emission, lower the count in burst or time, spawns less particle).
+
+Glow clipping through environment?
+If your effects are clipping to much try to change the material defaultGlow_additive to Mobile-Particle-Add-ZTestAlways. These will render the effects above environment regardless.
+I recommend using the Mobile-Particle-Add-ZTestAlways shader if you don't have any cellings or walls that might obstruct the view.
+
+A video showcasing this should be available in the Stylized Mobile Projectile Video avaiable in the assetstore.
+
+If you have any questions, thoughts or suggestions please email me at nordgren@hotmail.com with the topic: "Stylized Mobile Projectile Pack 1 Feedback".
+
+PS: I apolgize for having rigidbodies and DestroyMe Scripts on the effects, this so I can test the effects.
+The unity scene might lag if you have to many effects with the colorchange script keep_apply feature applied.
