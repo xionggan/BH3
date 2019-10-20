@@ -14,28 +14,32 @@ public class CameraController : MonoBehaviour {
 
     public float shakeTime = 0.02f;
 
-    public float rotateSpeed = 2f;
+    public float rotateSpeed = 1f;
 
     private float currentTime = 0.0f;
     private float totalTime = 0.0f;
 
+    private ETCTouchPad touchPad;
+    private bool isPadTouch = false;
+
 	// Use this for initialization
 	void Start ()
     {
-
+        touchPad = ETCInput.GetControlTouchPad("MainTouchPad");
 	}
 	
 	// Update is called once per frame
 	void Update ()
     {
+        touchPad.onTouchStart.AddListener(() => isPadTouch = true);
 
-        bool mouseLeftBtn = Input.GetMouseButton(0);
+        touchPad.onTouchUp.AddListener(() => isPadTouch = false);
 
-        if (mouseLeftBtn)
+        if (isPadTouch)
         {
-            float xDelta = Input.GetAxis("Mouse X");
+            float xDelta = ETCInput.GetAxis("THorizontal");
 
-            float yDelta = -Input.GetAxis("Mouse Y");
+            float yDelta = -ETCInput.GetAxis("TVertical");
 
             transform.Rotate(Vector3.up, xDelta * rotateSpeed, Space.World);
 

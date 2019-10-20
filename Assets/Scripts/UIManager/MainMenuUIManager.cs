@@ -167,7 +167,7 @@ public class MainMenuUIManager : MonoBehaviour
             return;
         }
 
-        string message = ((int)MessageType.Login).ToString() + "_"
+        string message = ((int)NetMessageType.Login).ToString() + "_"
             + loginUsernameText.text + "_" + loginPasswordText.text;
 
         client.Send(message); 
@@ -228,7 +228,7 @@ public class MainMenuUIManager : MonoBehaviour
             return;
         }
 
-        string message = ((int)MessageType.Register).ToString() + "_"
+        string message = ((int)NetMessageType.Register).ToString() + "_"
             + registerUsernameText.text + "_" + registerPasswordText.text;
 
         client.Send(message);  

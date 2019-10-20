@@ -32,7 +32,7 @@ Shader "Shader Forge/UVPanner" {
             #include "UnityCG.cginc"
             #pragma multi_compile_fwdbase
             #pragma multi_compile_fog
-            #pragma only_renderers d3d9 d3d11 glcore gles 
+            #pragma only_renderers d3d9 d3d11 glcore gles gles3 
             #pragma target 3.0
             uniform sampler2D _Mask; uniform float4 _Mask_ST;
             uniform float4 _Color;
@@ -84,7 +84,7 @@ Shader "Shader Forge/UVPanner" {
             #pragma fragmentoption ARB_precision_hint_fastest
             #pragma multi_compile_shadowcaster
             #pragma multi_compile_fog
-            #pragma only_renderers d3d9 d3d11 glcore gles 
+            #pragma only_renderers d3d9 d3d11 glcore gles gles3 
             #pragma target 3.0
             uniform sampler2D _Mask; uniform float4 _Mask_ST;
             uniform float _USpeed;

@@ -30,7 +30,7 @@ Shader "Shader Forge/FrameAnimSplit" {
             #include "UnityCG.cginc"
             #pragma multi_compile_fwdbase_fullshadows
             #pragma multi_compile_fog
-            #pragma only_renderers d3d9 d3d11 glcore gles 
+            #pragma only_renderers d3d9 d3d11 glcore gles gles3 
             #pragma target 3.0
             uniform sampler2D _MainTexture; uniform float4 _MainTexture_ST;
             uniform float4 _WidthHeight;

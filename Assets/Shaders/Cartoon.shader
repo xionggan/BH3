@@ -34,7 +34,7 @@ Shader "Shader Forge/Cartoon" {
             #pragma fragmentoption ARB_precision_hint_fastest
             #pragma multi_compile_shadowcaster
             #pragma multi_compile_fog
-            #pragma only_renderers d3d9 d3d11 glcore gles 
+            #pragma only_renderers d3d9 d3d11 glcore gles gles3 
             #pragma target 3.0
             uniform float _OutLineWidth;
             uniform float4 _OutLineColor;
@@ -73,7 +73,7 @@ Shader "Shader Forge/Cartoon" {
             #include "Lighting.cginc"
             #pragma multi_compile_fwdbase_fullshadows
             #pragma multi_compile_fog
-            #pragma only_renderers d3d9 d3d11 glcore gles 
+            #pragma only_renderers d3d9 d3d11 glcore gles gles3 
             #pragma target 3.0
             uniform sampler2D _Texture; uniform float4 _Texture_ST;
             uniform float4 _Color;

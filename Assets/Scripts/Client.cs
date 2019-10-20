@@ -10,7 +10,7 @@ using System.Threading;
 /*网络游戏中的所有的的逻辑运算和数据处理，全部是由服务器完成的，客户端只负责绘制
 在客户端中能看到自己和其他物体的变化*/
 
-public enum MessageType
+public enum NetMessageType
 {
     IdInfo = 0,
     Register,
@@ -177,7 +177,7 @@ public class Client : MonoBehaviour {
 		if (GUILayout.Button("发送消息"))
 		{
 			//消息类型+聊天内容
-			string message=((int)MessageType.TextInfo).ToString()+"_"+inputMessage;
+            string message = ((int)NetMessageType.TextInfo).ToString() + "_" + inputMessage;
 			Send(message);
 		}
 		//接收水平方向视图
@@ -258,7 +258,7 @@ public class Client : MonoBehaviour {
 				string[] tmpArray = mess.Split('_');
 
                 //注册消息
-                if ((MessageType)(int.Parse(tmpArray[0]))==MessageType.Register)
+                if ((NetMessageType)(int.Parse(tmpArray[0])) == NetMessageType.Register)
                 {
                     allDone.Reset();      
                     _register = true;
@@ -267,7 +267,7 @@ public class Client : MonoBehaviour {
                     allDone.WaitOne();
                 }
                 //登陆消息
-                else if ((MessageType)(int.Parse(tmpArray[0])) == MessageType.Login)
+                else if ((NetMessageType)(int.Parse(tmpArray[0])) == NetMessageType.Login)
                 {
                     allDone.Reset();
                     _login = true;
@@ -276,7 +276,7 @@ public class Client : MonoBehaviour {
                     allDone.WaitOne();
                 }
                 //创建角色消息
-                else if ((MessageType)(int.Parse(tmpArray[0])) == MessageType.RoleName)
+                else if ((NetMessageType)(int.Parse(tmpArray[0])) == NetMessageType.RoleName)
                 {
                     allDone.Reset();
                     _roleName = true;
@@ -285,12 +285,12 @@ public class Client : MonoBehaviour {
                     allDone.WaitOne();
                 }
 				//设置id
-				else if ((MessageType)(int.Parse(tmpArray[0]))==MessageType.IdInfo)
+                else if ((NetMessageType)(int.Parse(tmpArray[0])) == NetMessageType.IdInfo)
 				{
 					id=int.Parse(tmpArray[1]);
 				}
 				//创建模型消息
-				else if ((MessageType)(int.Parse(tmpArray[0]))==MessageType.CreateInfo)
+                else if ((NetMessageType)(int.Parse(tmpArray[0])) == NetMessageType.CreateInfo)
 				{
 					allDone.Reset();
 					callMessage=mess;
@@ -299,7 +299,7 @@ public class Client : MonoBehaviour {
 					allDone.WaitOne();
 				}
 				//聊天消息
-				else if ((MessageType)(int.Parse(tmpArray[0]))==MessageType.TextInfo)
+                else if ((NetMessageType)(int.Parse(tmpArray[0])) == NetMessageType.TextInfo)
 				{
 					//消息类型+用户id+聊天消息
 					if (id==int.Parse(tmpArray[1]))
@@ -308,14 +308,14 @@ public class Client : MonoBehaviour {
 						ReMessage+="\n"+"发送者id:" + tmpArray[1] + "[" + tmpArray[2] + "]";
 				}
 				//移动消息
-				else if ((MessageType)(int.Parse(tmpArray[0]))==MessageType.MoveInfo)
+                else if ((NetMessageType)(int.Parse(tmpArray[0])) == NetMessageType.MoveInfo)
 				{
 					//消息类型+用户id+移动方向
 					int playerId=int.Parse(tmpArray[1]);
                     ((ChatClient)players_obj[playerId]).moveDirArray.Add(tmpArray[2]);   
 				}
 				//销毁某一玩家模型
-				else if ((MessageType)(int.Parse(tmpArray[0]))==MessageType.DestroyInfo)
+                else if ((NetMessageType)(int.Parse(tmpArray[0])) == NetMessageType.DestroyInfo)
 				{
 					allDone.Reset();
 					callMessage=mess;
@@ -324,7 +324,7 @@ public class Client : MonoBehaviour {
 					allDone.WaitOne();
 				}
                 //同步消息
-                else if((MessageType)(int.Parse(tmpArray[0]))==MessageType.AsynInfo)
+                else if ((NetMessageType)(int.Parse(tmpArray[0])) == NetMessageType.AsynInfo)
                 {
                     allDone.Reset();
                     callMessage = mess;
@@ -357,7 +357,7 @@ public class Client : MonoBehaviour {
 		Socket client = (Socket)ar.AsyncState;
 		// Complete sending the data to the remote device.     
 		int bytesSent = client.EndSend(ar);
-		//Debug.Log("发送 {"+bytesSent+"} 字节数据 到服务器端");
+		Debug.Log("发送 {"+bytesSent+"} 字节数据 到服务器端");
 	}
 	
 

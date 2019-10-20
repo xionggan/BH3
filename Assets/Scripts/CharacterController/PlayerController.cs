@@ -31,9 +31,9 @@ public class PlayerController : CharacterManager {
 	// Update is called once per frame
     public override void Update()
     {
-        float xDelta = Input.GetAxis("Horizontal");
+        float xDelta = ETCInput.GetAxis("Horizontal");
 
-        float zDelta = Input.GetAxis("Vertical");
+        float zDelta = ETCInput.GetAxis("Vertical");
 
         Camera camera = Camera.main;
 
@@ -45,9 +45,9 @@ public class PlayerController : CharacterManager {
 
         moveDir.Normalize();
 
-        bool isAtkKeyDown = Input.GetKeyDown(KeyCode.J);
+        bool isAtkKeyDown = Input.GetKeyDown(KeyCode.J) || ETCInput.GetButtonDown("ButtonAtk");
 
-        bool isAtkKeyPress = Input.GetKey(KeyCode.J);
+        bool isAtkKeyPress = Input.GetKey(KeyCode.J) || ETCInput.GetButton("ButtonAtk");
 
         if (isAtkKeyPress)
         {
@@ -60,9 +60,9 @@ public class PlayerController : CharacterManager {
 
         bool isAtkKeyLongPress = atkBtnPressTime > 0.1f;
 
-        bool isEvadeKeyDown = Input.GetKeyDown(KeyCode.K);
+        bool isEvadeKeyDown = Input.GetKeyDown(KeyCode.K) || ETCInput.GetButton("ButtonEvade");
 
-        bool isSwitchKeyDown = Input.GetKeyDown(KeyCode.L);
+        bool isSwitchKeyDown = Input.GetKeyDown(KeyCode.L) || ETCInput.GetButton("ButtonSwitch");
 
         int curAnimaTag = animator.GetCurrentAnimatorStateInfo(0).tagHash;
 
