@@ -67,7 +67,7 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     m_Floats:
-    - _AmbientPower: 8
+    - _AmbientPower: 2
     - _BumpScale: 1
     - _Cutoff: 0.5
     - _DetailNormalMapScale: 1
@@ -90,7 +90,7 @@ Material:
     - _UseAmbientLight: 0.1
     - _ZWrite: 1
     m_Colors:
-    - _AmbientLightColor: {r: 0.23529412, g: 0.23529412, b: 0.23529412, a: 1}
+    - _AmbientLightColor: {r: 1, g: 1, b: 1, a: 1}
     - _Color: {r: 1, g: 1, b: 1, a: 1}
     - _Color_copy: {r: 0.49803922, g: 0.49803922, b: 0.49803922, a: 1}
     - _EmissionColor: {r: 0, g: 0, b: 0, a: 0}
